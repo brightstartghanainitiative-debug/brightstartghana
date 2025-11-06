@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="description" content="Bright Start Ghana Initiative - Empowering 50 pre-KG children in Gomoa Fetteh through education, nutrition, and community support." />
+<title>Bright Start Ghana Initiative - Give Every Child a Brighter Start</title>
+<style>
+  :root{
+    --maroon: #800000;
+    --gold: #DAA520;
+    --green: #006400;
+    --bg: #ffffff;
+    --muted: #555;
+    --light-bg: #fef9f3;
+    --radius: 12px;
+    --container: 1100px;
+  }
+  * { box-sizing: border-box; }
+  body{
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    margin:0; background:var(--bg); color:#222; -webkit-font-smoothing:antialiased;
+    line-height: 1.6;
+  }
+  .wrap{max-width:var(--container);margin:0 auto;padding:20px;}
+  
+  /* HEADER */
+  header{
+    background:linear-gradient(135deg, rgba(128,0,0,0.95), rgba(128,0,0,0.85)); 
+    color:white; 
+    border-radius:0 0 var(--radius) var(--radius); 
+    padding:32px 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+  .brand{display:flex;align-items:center;gap:16px;margin-bottom:20px;}
+  .logo{
+    width:80px;height:80px;border-radius:12px;
+    background:linear-gradient(135deg,var(--gold),rgba(255,215,0,0.8));
+    display:flex;align-items:center;justify-content:center;font-weight:800;
+    color:var(--maroon);font-size:16px;letter-spacing:1px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.15);
+  }
+  h1{margin:0;font-size:28px;letter-spacing:0.5px;font-weight:700;}
+  p.lead{margin:10px 0 0;font-size:16px;color:#fff;opacity:0.95;max-width:650px;}
+  
+  /* HERO SECTION */
+  .hero{display:flex;flex-wrap:wrap;align-items:stretch;gap:20px;margin-top:24px;}
+  .hero .left{flex:1 1 400px;min-width:300px;}
+  .hero .right{flex:1 1 360px;min-width:280px;}
+  
+  /* CARDS */
+  .card{
+    background:#fff;border-radius:12px;padding:24px;
+    box-shadow:0 6px 24px rgba(0,0,0,0.08);
+    border:1px solid rgba(0,0,0,0.04);
+  }
+  .card-highlight{
+    background:linear-gradient(135deg, var(--light-bg), #fff);
+    border:2px solid var(--gold);
+  }
+  
+  /* IMPACT STATS */
+  .stats{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    gap:16px;margin:20px 0;
+  }
+  .stat{
+    text-align:center;padding:20px;background:var(--light-bg);
+    border-radius:10px;border:1px solid rgba(218,165,32,0.2);
+  }
+  .stat-number{
+    font-size:36px;font-weight:800;color:var(--maroon);
+    display:block;line-height:1;
+  }
+  .stat-label{
+    font-size:13px;color:var(--muted);margin-top:8px;
+    font-weight:600;text-transform:uppercase;letter-spacing:0.5px;
+  }
+  
+  /* BUTTONS */
+  .btn{
+    display:inline-block;padding:14px 28px;border-radius:999px;
+    background:var(--gold);color:var(--maroon);font-weight:700;
+    text-decoration:none;transition:all 0.3s ease;
+    box-shadow:0 6px 16px rgba(218,165,32,0.25);
+    font-size:15px;border:none;cursor:pointer;
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(218,165,32,0.35);}
+  .btn-primary{background:var(--maroon);color:white;}
+  .btn-primary:hover{background:#600000;}
+  .btn-ghost{
+    background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.3);
+    box-shadow:none;
+  }
+  .btn-ghost:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.5);}
+  .btn-large{padding:18px 36px;font-size:17px;}
+  
+  /* SECTIONS */
+  section{padding:48px 0;border-bottom:1px solid #eee;}
+  section:last-of-type{border-bottom:none;}
+  h2{
+    color:var(--maroon);margin:0 0 16px 0;font-size:32px;
+    font-weight:700;position:relative;padding-bottom:12px;
+  }
+  h2:after{
+    content:'';position:absolute;bottom:0;left:0;
+    width:60px;height:4px;background:var(--gold);border-radius:2px;
+  }
+  h3{color:var(--maroon);margin:0 0 10px;font-size:20px;font-weight:700;}
+  
+  /* URGENCY BANNER */
+  .urgency{
+    background:linear-gradient(135deg, #fff5e6, #ffe6cc);
+    border-left:4px solid var(--gold);padding:16px 20px;
+    border-radius:8px;margin:20px 0;
+    box-shadow:0 4px 12px rgba(218,165,32,0.1);
+  }
+  .urgency strong{color:var(--maroon);font-size:18px;}
+  
+  /* SPONSORSHIP TIERS */
+  .tiers{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;margin:24px 0;
+  }
+  .tier{
+    background:white;padding:28px;border-radius:12px;
+    border:2px solid #eee;transition:all 0.3s ease;
+    text-align:center;position:relative;
+  }
+  .tier:hover{
+    transform:translateY(-4px);border-color:var(--gold);
+    box-shadow:0 12px 30px rgba(218,165,32,0.2);
+  }
+  .tier-featured{
+    border-color:var(--gold);
+    background:linear-gradient(135deg, var(--light-bg), white);
+  }
+  .tier-featured:before{
+    content:'MOST IMPACT';position:absolute;top:-12px;left:50%;
+    transform:translateX(-50%);background:var(--gold);color:var(--maroon);
+    padding:4px 16px;border-radius:999px;font-size:11px;
+    font-weight:800;letter-spacing:0.5px;
+  }
+  .tier-price{
+    font-size:42px;font-weight:800;color:var(--maroon);
+    display:block;margin:10px 0;
+  }
+  .tier-name{
+    font-size:18px;font-weight:700;color:var(--maroon);
+    text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;
+  }
+  .tier-list{
+    text-align:left;list-style:none;padding:0;margin:16px 0;
+    font-size:14px;color:var(--muted);
+  }
+  .tier-list li{
+    padding:8px 0;border-bottom:1px solid #f0f0f0;
+    display:flex;align-items:start;gap:8px;
+  }
+  .tier-list li:before{content:'✓';color:var(--green);font-weight:800;flex-shrink:0;}
+  .tier-list li:last-child{border:none;}
+  
+  /* PROGRAMS GRID */
+  .grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:20px;
+  }
+  .program{
+    background:white;padding:24px;border-radius:12px;
+    border:1px solid #f0f0f0;transition:all 0.3s ease;
+  }
+  .program:hover{
+    box-shadow:0 8px 24px rgba(0,0,0,0.1);
+    transform:translateY(-2px);
+  }
+  .program-icon{
+    font-size:42px;margin-bottom:12px;display:block;
+  }
+  
+  /* TESTIMONIALS */
+  .testimonial{
+    background:var(--light-bg);padding:24px;border-radius:12px;
+    border-left:4px solid var(--gold);margin:16px 0;
+    font-style:italic;color:#333;
+  }
+  .testimonial-author{
+    margin-top:12px;font-style:normal;font-weight:700;
+    color:var(--maroon);font-size:14px;
+  }
+  
+  /* GALLERY */
+  .gallery{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:12px;margin:24px 0;
+  }
+  .placeholder{
+    background:#f7f7f7;border:2px dashed #ddd;border-radius:10px;
+    min-height:180px;display:flex;align-items:center;justify-content:center;
+    color:#999;padding:16px;text-align:center;font-size:14px;
+    transition:all 0.3s ease;
+  }
+  .placeholder:hover{border-color:var(--gold);background:#fef9f3;}
+  
+  /* NEWSLETTER */
+  .newsletter{
+    background:linear-gradient(135deg, var(--maroon), #600000);
+    color:white;padding:40px;border-radius:12px;
+    text-align:center;margin:32px 0;
+  }
+  .newsletter input{
+    padding:14px 20px;border-radius:999px;border:none;
+    width:100%;max-width:400px;margin:16px auto 0;
+    font-size:15px;
+  }
+  .newsletter button{margin-top:16px;}
+  
+  /* PAYMENT OPTIONS */
+  .payment-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:16px;margin:20px 0;
+  }
+  .payment-option{
+    background:white;padding:20px;border-radius:10px;
+    border:2px solid #eee;text-align:center;
+  }
+  .payment-option strong{display:block;color:var(--maroon);margin-bottom:8px;}
+  
+  /* UTILITIES */
+  .small{font-size:14px;color:var(--muted);line-height:1.6;}
+  .text-center{text-align:center;}
+  .mt-1{margin-top:16px;}
+  .mt-2{margin-top:24px;}
+  .mb-2{margin-bottom:24px;}
+  
+  /* FOOTER */
+  footer{
+    background:#f9f9f9;padding:32px 0;text-align:center;
+    color:var(--muted);font-size:14px;border-top:1px solid #eee;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width:720px){
+    header{padding:20px 12px;border-radius:0 0 10px 10px;}
+    .wrap{padding:16px;}
+    .brand{gap:12px;}
+    .logo{width:60px;height:60px;font-size:14px;}
+    h1{font-size:22px;}
+    h2{font-size:26px;}
+    .stat-number{font-size:28px;}
+    .tier-price{font-size:32px;}
+    .btn{padding:12px 24px;font-size:14px;}
+    .btn-large{padding:14px 28px;font-size:15px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <div class="logo">BSG</div>
+      <div>
+        <h1>Bright Start Ghana Initiative</h1>
+        <p class="lead">Empowering Ghana's youngest learners through education, nutrition, and faith-driven community support in Gomoa Fetteh.</p>
+      </div>
+    </div>
+
+    <!-- IMPACT STATS -->
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-number">50</span>
+        <span class="stat-label">Children Served</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">1</span>
+        <span class="stat-label">Pre-KG Classroom</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">$2,300</span>
+        <span class="stat-label">Initial Budget</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">3</span>
+        <span class="stat-label">Month Program</span>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="left">
+        <div class="card card-highlight">
+          <h2 style="margin-top:0;font-size:24px;">Every Child Deserves a Strong Start</h2>
+          <p class="small">In Gomoa Fetteh, a fishing community in Ghana's Central Region, 50 pre-kindergarten children face barriers to education that will affect them for life. Without basic learning materials, nutritious meals, and trained teachers, these children start primary school already behind.</p>
+          <p class="small" style="margin-top:12px;"><strong>But you can change that.</strong> Your support provides books, daily snacks, teacher training, and hope to children who need it most.</p>
+          <div style="margin-top:20px;display:flex;flex-wrap:wrap;gap:12px;">
+            <a class="btn btn-primary btn-large" href="#donate">Donate Now</a>
+            <a class="btn btn-ghost" href="#learn">Learn More</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="right">
+        <div class="card">
+          <h3 style="margin-top:0;">Urgent Needs</h3>
+          <ul style="list-style:none;padding:0;margin:12px 0;">
+            <li style="padding:8px 0;border-bottom:1px solid #eee;"><strong>📚 Learning materials:</strong> books, puzzles, crayons, mats</li>
+            <li style="padding:8px 0;border-bottom:1px solid #eee;"><strong>👨‍🏫 Teacher support:</strong> training & monthly stipend</li>
+            <li style="padding:8px 0;border-bottom:1px solid #eee;"><strong>🍎 Daily nutrition:</strong> healthy snack for each child</li>
+            <li style="padding:8px 0;"><strong>👨‍👩‍👧 Parent engagement:</strong> community workshops</li>
+          </ul>
+          <p class="small" style="margin-top:16px;text-align:center;">
+            <strong>Contact:</strong> <a href="mailto:brightstartghana@gmail.com" style="color:var(--maroon);">brightstartghana@gmail.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- URGENCY BANNER -->
+  <div class="urgency">
+    <strong>🔔 Why Now?</strong> The school term is underway, and every day without proper resources means children fall further behind. Your donation today makes an immediate impact on 50 children's futures.
+  </div>
+
+  <!-- ABOUT SECTION -->
+  <section id="learn">
+    <h2>Our Mission</h2>
+    <p>Bright Start Ghana Initiative is a community-led nonprofit dedicated to giving young children in rural Ghana a fair and strong start in life through access to quality early-childhood education, learning resources, and teacher support.</p>
+    
+    <div style="margin-top:24px;background:var(--light-bg);padding:24px;border-radius:12px;border-left:4px solid var(--maroon);">
+      <h3>Why Gomoa Fetteh?</h3>
+      <p class="small">Gomoa Fetteh is a fishing community in Ghana's Central Region where poverty levels remain high. Many families struggle to provide educational support for their children, especially during the crucial pre-kindergarten years (ages 3-5). The local DA Pre-KG classroom faces critical shortages:</p>
+      <ul class="small">
+        <li>No age-appropriate books or learning materials</li>
+        <li>Limited play equipment for early development</li>
+        <li>Teacher lacks training in early childhood education</li>
+        <li>No feeding program - children attend school hungry</li>
+        <li>Parents have no resources to support learning at home</li>
+      </ul>
+      <p class="small"><strong>The result?</strong> Children start primary school unprepared, struggle academically, and often drop out early - perpetuating the cycle of poverty.</p>
+    </div>
+
+    <h3 style="margin-top:32px;">Expected Impact</h3>
+    <div class="grid">
+      <div class="card">
+        <span style="font-size:32px;display:block;margin-bottom:8px;">📈</span>
+        <strong style="color:var(--maroon);">Improved Attendance</strong>
+        <p class="small">Daily snacks and engaging activities increase regular attendance by 40%+</p>
+      </div>
+      <div class="card">
+        <span style="font-size:32px;display:block;margin-bottom:8px;">📖</span>
+        <strong style="color:var(--maroon);">Literacy Readiness</strong>
+        <p class="small">Access to books and learning materials builds foundational reading skills</p>
+      </div>
+      <div class="card">
+        <span style="font-size:32px;display:block;margin-bottom:8px;">🎓</span>
+        <strong style="color:var(--maroon);">School Success</strong>
+        <p class="small">Children enter primary school prepared, confident, and ready to learn</p>
+      </div>
+      <div class="card">
+        <span style="font-size:32px;display:block;margin-bottom:8px;">🤝</span>
+        <strong style="color:var(--maroon);">Community Ownership</strong>
+        <p class="small">Parents and volunteers become advocates for early childhood education</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMS -->
+  <section id="programs">
+    <h2>Our Programs</h2>
+    <p class="mb-2">A comprehensive approach to early childhood development that addresses education, nutrition, and community engagement.</p>
+    
+    <div class="grid">
+      <div class="program">
+        <span class="program-icon">📚</span>
+        <h3>Early Learning Support</h3>
+        <p class="small">Age-appropriate books, puzzles, educational charts, crayons, play mats, and learning toys. Creating a colorful, engaging classroom environment where children love to learn.</p>
+        <p class="small" style="margin-top:12px;color:var(--maroon);font-weight:600;">Budget: $700</p>
+      </div>
+      
+      <div class="program">
+        <span class="program-icon">🍎</span>
+        <h3>Nutrition & Hygiene</h3>
+        <p class="small">Daily nutritious snacks, hygiene kits, handwashing supplies, and safe drinking water. Healthy children learn better and attend school more regularly.</p>
+        <p class="small" style="margin-top:12px;color:var(--maroon);font-weight:600;">Budget: $800 (3 months)</p>
+      </div>
+      
+      <div class="program">
+        <span class="program-icon">👨‍🏫</span>
+        <h3>Teacher Support</h3>
+        <p class="small">Monthly stipend for local teacher, training in early childhood pedagogy, classroom management techniques, and ongoing mentorship from education volunteers.</p>
+        <p class="small" style="margin-top:12px;color:var(--maroon);font-weight:600;">Budget: $600</p>
+      </div>
+      
+      <div class="program">
+        <span class="program-icon">👨‍👩‍👧</span>
+        <h3>Parent Engagement</h3>
+        <p class="small">Community workshops, parent training materials, home learning activities, and resources to empower parents as their children's first teachers.</p>
+        <p class="small" style="margin-top:12px;color:var(--maroon);font-weight:600;">Budget: $200</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DONATION TIERS -->
+  <section id="donate">
+    <h2>Ways to Give</h2>
+    <p class="mb-2">Every contribution makes a real, measurable difference in a child's life. Choose the impact level that works for you:</p>
+    
+    <div class="tiers">
+      <div class="tier">
+        <div class="tier-name">Friend</div>
+        <div class="tier-price">$50</div>
+        <ul class="tier-list">
+          <li>Provides books and crayons for 5 children</li>
+          <li>Supports classroom supplies</li>
+          <li>Recognition on donor page</li>
+        </ul>
+        <a href="mailto:brightstartghana@gmail.com?subject=Friend%20Donation%20-%20$50" class="btn" style="margin-top:16px;">Give $50</a>
+      </div>
+      
+      <div class="tier">
+        <div class="tier-name">Supporter</div>
+        <div class="tier-price">$150</div>
+        <ul class="tier-list">
+          <li>Feeds 10 children for 1 month</li>
+          <li>Provides learning materials</li>
+          <li>Quarterly impact updates</li>
+          <li>Photos from classroom</li>
+        </ul>
+        <a href="mailto:brightstartghana@gmail.com?subject=Supporter%20Donation%20-%20$150" class="btn" style="margin-top:16px;">Give $150</a>
+      </div>
+      
+      <div class="tier tier-featured">
+        <div class="tier-name">Champion</div>
+        <div class="tier-price">$500</div>
+        <ul class="tier-list">
+          <li>Sponsors full classroom materials OR</li>
+          <li>Feeds all 50 children for 1 month</li>
+          <li>Monthly video updates</li>
+          <li>Direct teacher correspondence</li>
+          <li>Certificate of appreciation</li>
+        </ul>
+        <a href="mailto:brightstartghana@gmail.com?subject=Champion%20Donation%20-%20$500" class="btn btn-primary" style="margin-top:16px;">Give $500</a>
+      </div>
+      
+      <div class="tier">
+        <div class="tier-name">Partner</div>
+        <div class="tier-price">$1,000+</div>
+        <ul class="tier-list">
+          <li>Fund entire program component</li>
+          <li>Strategic partnership opportunities</li>
+          <li>Site visit coordination (if traveling to Ghana)</li>
+          <li>Naming opportunities</li>
+          <li>Custom impact reporting</li>
+        </ul>
+        <a href="mailto:brightstartghana@gmail.com?subject=Partner%20Donation%20-%20$1000+" class="btn btn-primary" style="margin-top:16px;">Become a Partner</a>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:32px;">
+      <p><strong>Custom Amount?</strong> Every dollar helps! Contact us to discuss how your contribution can make an impact.</p>
+      <a href="mailto:brightstartghana@gmail.com?subject=Custom%20Donation%20Inquiry" class="btn btn-large">Contact About Giving</a>
+    </div>
+  </section>
+
+  <!-- PAYMENT OPTIONS -->
+  <section id="payment">
+    <h2>How to Donate</h2>
+    <p class="mb-2">We accept donations through multiple secure methods for your convenience:</p>
+    
+    <div class="payment-grid">
+      <div class="payment-option">
+        <strong>🏦 Bank Transfer</strong>
+        <p class="small">US and Ghana bank details available upon request</p>
+      </div>
+      <div class="payment-option">
+        <strong>💳 Zelle / Venmo</strong>
+        <p class="small">Quick transfers - email for details</p>
+      </div>
+      <div class="payment-option">
+        <strong>✉️ Check</strong>
+        <p class="small">Mail to our Virginia address</p>
+      </div>
+      <div class="payment-option">
+        <strong>🌍 Mobile Money (Ghana)</strong>
+        <p class="small">MTN/AirtelTigo for local donors</p>
+      </div>
+    </div>
+    
+    <div style="background:var(--light-bg);padding:20px;border-radius:10px;text-align:center;margin-top:24px;">
+      <p class="small"><strong>For payment details and tax receipts:</strong></p>
+      <a href="mailto:brightstartghana@gmail.com?subject=Donation%20Payment%20Information" class="btn" style="margin-top:12px;">Email for Payment Info</a>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <h2>Community Voices</h2>
+    
+    <div class="testimonial">
+      "Education is the foundation of our children's future. We are grateful for this support that will help our little ones learn and grow."
+      <div class="testimonial-author">— Local Parent, Gomoa Fetteh</div>
+    </div>
+    
+    <div class="testimonial">
+      "These children are eager to learn but lack the basic materials. This initiative will transform their early education experience."
+      <div class="testimonial-author">— Teacher, DA Pre-KG Classroom</div>
+    </div>
+    
+    <p class="small text-center mt-2"><em>More testimonials and success stories will be added as the program launches.</em></p>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <h2>See the Need, See the Hope</h2>
+    <p class="small mb-2">Photos and video help donors connect with the children and community. Upload authentic, high-quality media showing:</p>
+    
+    <div class="gallery">
+      <div class="placeholder">
+        <div>
+          <strong>Photo 1</strong><br/>
+          Children in classroom<br/>
+          <small>(Shows current conditions)</small>
+        </div>
+      </div>
+      <div class="placeholder">
+        <div>
+          <strong>Photo 2</strong><br/>
+          Community gathering<br/>
+          <small>(Parents & volunteers)</small>
+        </div>
+      </div>
+      <div class="placeholder">
+        <div>
+          <strong>Photo 3</strong><br/>
+          Learning materials needed<br/>
+          <small>(Current supply gap)</small>
+        </div>
+      </div>
+      <div class="placeholder">
+        <div>
+          <strong>Photo 4</strong><br/>
+          Teacher with students<br/>
+          <small>(Classroom activities)</small>
+        </div>
+      </div>
+      <div class="placeholder">
+        <div>
+          <strong>Photo 5</strong><br/>
+          School building exterior<br/>
+          <small>(Community context)</small>
+        </div>
+      </div>
+      <div class="placeholder">
+        <div>
+          <strong>Video (1-2 min)</strong><br/>
+          Children's stories & needs<br/>
+          <small>(YouTube or Drive embed)</small>
+        </div>
+      </div>
+    </div>
+    
+    <div style="background:#fffbf0;padding:20px;border-radius:10px;margin-top:20px;border-left:4px solid var(--gold);">
+      <strong>📸 Media Tips for Maximum Donor Impact:</strong>
+      <ul class="small">
+        <li><strong>Show faces & emotions:</strong> Children's smiles and expressions create emotional connection</li>
+        <li><strong>Show the gap:</strong> Empty shelves, worn materials, crowded spaces help donors understand the need</li>
+        <li><strong>Keep it authentic:</strong> Real, unposed photos build trust</li>
+        <li><strong>Add context:</strong> Captions explaining what donors are seeing</li>
+        <li><strong>Video power:</strong> 60-90 second video with local teacher or child speaking (even with subtitles) is most compelling</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SUSTAINABILITY -->
+  <section id="sustainability">
+    <h2>Long-Term Vision</h2>
+    <p>This is more than a one-time project - it's the foundation for lasting change in Gomoa Fetteh.</p>
+    
+    <div class="grid" style="margin-top:24px;">
+      <div class="card">
+        <h3 style="font-size:18px;">Phase 1 (Months 1-3)</h3>
+        <p class="small">Initial classroom setup, teacher training, feeding program launch, parent workshops</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:18px;">Phase 2 (Months 4-6)</h3>
+        <p class="small">Form parent-teacher committee, train local volunteers, establish community ownership</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:18px;">Phase 3 (Months 7-12)</h3>
+        <p class="small">Local fundraising activities, expand to neighboring communities, document successes</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:18px;">Long-Term Goal</h3>
+        <p class="small">Self-sustaining program with community ownership and regional expansion model</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERSHIP OPPORTUNITIES -->
+  <section id="partnership">
+    <h2>Partnership Opportunities</h2>
+    <p>We invite organizations, churches, and corporate partners to join us in transforming early education in Gomoa Fetteh.</p>
+    
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-top:24px;">
+      <div class="card">
+        <h3>🏢 Corporate Partners</h3>
+        <p class="small">Employee matching programs, corporate social responsibility initiatives, bulk material donations, skills-based volunteering</p>
+      </div>
+      <div class="card">
+        <h3>⛪ Faith Communities</h3>
+        <p class="small">Church mission partnerships, congregation fundraising, prayer support, short-term mission trip opportunities</p>
+      </div>
+      <div class="card">
+        <h3>🎓 Educational Institutions</h3>
+        <p class="small">Student service learning projects, curriculum development support, teacher training partnerships, research opportunities</p>
+      </div>
+      <div class="card">
+        <h3>🌍 NGO Collaboration</h3>
+        <p class="small">Joint programming, resource sharing, best practices exchange, monitoring & evaluation support</p>
+      </div>
+    </div>
+    
+    <div style="text-align:center;margin-top:32px;">
+      <a href="mailto:brightstartghana@gmail.com?subject=Partnership%20Inquiry" class="btn btn-primary btn-large">Explore Partnership</a>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <div class="newsletter">
+    <h2 style="color:white;margin-bottom:8px;">Stay Connected</h2>
+    <p style="font-size:16px;margin-bottom:8px;">Get updates on our progress, stories from the classroom, and ways to get involved.</p>
+    <form onsubmit="alert('Thank you for subscribing! Please send an email to brightstartghana@gmail.com with subject: Newsletter Signup'); return false;">
+      <input type="email" placeholder="Enter your email address" required />
+      <button type="submit" class="btn btn-large">Subscribe for Updates</button>
+    </form>
+  </div>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div class="card" style="display:flex;flex-wrap:wrap;gap:32px;align-items:start;">
+      <div style="flex:1;min-width:280px;">
+        <h3>Get in Touch</h3>
+        <div style="margin:16px 0;">
+          <p class="small"><strong>Founder:</strong> George Armah</p>
+          <p class="small"><strong>Email:</strong> <a href="mailto:brightstartghana@gmail.com" style="color:var(--maroon);">brightstartghana@gmail.com</a></p>
+          <p class="small"><strong>Location:</strong> Gomoa Fetteh, Central Region, Ghana</p>
+          <p class="small"><strong>US Base:</strong> Virginia, USA</p>
+        </div>
+        
+        <div style="background:var(--light-bg);padding:16px;border-radius:8px;margin-top:20px;">
+          <strong style="color:var(--maroon);">We Welcome:</strong>
+          <ul class="small" style="margin-top:8px;">
+            <li>Donation inquiries & questions</li>
+            <li>Partnership proposals</li>
+            <li>Volunteer opportunities</li>
+            <li>Media & interview requests</li>
+            <li>Visit coordination (Ghana)</li>
+          </ul>
+        </div>
+        
+        <div style="margin-top:20px;">
+          <a href="mailto:brightstartghana@gmail.com" class="btn">Send Email</a>
+        </div>
+      </div>
+      
+      <div style="flex:1;min-width:280px;">
+        <h3>Quick Message</h3>
+        <form onsubmit="alert('Thank you! Please send your message to brightstartghana@gmail.com'); return false;" style="margin-top:16px;">
+          <label class="small" style="display:block;margin-bottom:12px;">
+            <strong>Name</strong><br/>
+            <input type="text" style="width:100%;padding:12px;border-radius:8px;border:1px solid #ddd;margin-top:6px;font-size:15px;" placeholder="Your name" required/>
+          </label>
+          
+          <label class="small" style="display:block;margin-bottom:12px;">
+            <strong>Email</strong><br/>
+            <input type="email" style="width:100%;padding:12px;border-radius:8px;border:1px solid #ddd;margin-top:6px;font-size:15px;" placeholder="your@email.com" required/>
+          </label>
+          
+          <label class="small" style="display:block;margin-bottom:12px;">
+            <strong>I'm interested in:</strong><br/>
+            <select style="width:100%;padding:12px;border-radius:8px;border:1px solid #ddd;margin-top:6px;font-size:15px;">
+              <option>Making a donation</option>
+              <option>Partnership opportunity</option>
+              <option>Volunteering</option>
+              <option>Visiting the project</option>
+              <option>Media inquiry</option>
+              <option>General question</option>
+            </select>
+          </label>
+          
+          <label class="small" style="display:block;margin-bottom:16px;">
+            <strong>Message</strong><br/>
+            <textarea style="width:100%;padding:12px;border-radius:8px;border:1px solid #ddd;margin-top:6px;font-size:15px;" rows="5" placeholder="Tell us how you'd like to help or what questions you have..." required></textarea>
+          </label>
+          
+          <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION -->
+  <div style="background:linear-gradient(135deg,var(--maroon),#600000);color:white;padding:48px 32px;border-radius:12px;text-align:center;margin:40px 0;">
+    <h2 style="color:white;margin-bottom:16px;font-size:36px;">Be Part of Their Story</h2>
+    <p style="font-size:18px;margin-bottom:24px;max-width:700px;margin-left:auto;margin-right:auto;">50 children in Gomoa Fetteh are waiting for the chance to learn, grow, and dream. Your gift today gives them that chance.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="#donate" class="btn btn-large" style="background:white;color:var(--maroon);">Make a Donation</a>
+      <a href="mailto:brightstartghana@gmail.com" class="btn btn-ghost btn-large">Contact Us</a>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p style="font-size:16px;font-weight:600;color:var(--maroon);">© 2025 Bright Start Ghana Initiative</p>
+    <p style="margin-top:8px;">Giving Every Child a Brighter Start</p>
+    <p style="margin-top:16px;font-size:13px;">
+      <strong>Quick Links:</strong>
+      <a href="#learn" style="color:var(--maroon);margin:0 8px;">About</a> |
+      <a href="#programs" style="color:var(--maroon);margin:0 8px;">Programs</a> |
+      <a href="#donate" style="color:var(--maroon);margin:0 8px;">Donate</a> |
+      <a href="#contact" style="color:var(--maroon);margin:0 8px;">Contact</a>
+    </p>
+    <p style="margin-top:16px;color:var(--muted);font-size:12px;">Replace photo placeholders with authentic images before publishing. Optimize images for web (max 2000px width, under 500KB each).</p>
+  </div>
+</footer>
+
+</body>
+</html>

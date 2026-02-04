@@ -38,6 +38,14 @@
   }
   
   /* ============================================ */
+  /* ANIMATIONS */
+  /* ============================================ */
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 2px 8px rgba(0,0,0,0.1), 0 0 0 0 rgba(218,165,32,0.7); }
+    50% { box-shadow: 0 2px 8px rgba(0,0,0,0.1), 0 0 0 10px rgba(218,165,32,0); }
+  }
+  
+  /* ============================================ */
   /* SKIP LINK FOR ACCESSIBILITY */
   /* ============================================ */
   .skip-link{
@@ -477,28 +485,37 @@
 </header>
 
 <!-- ============================================ -->
+<!-- SUCCESS BANNER -->
+<!-- ============================================ -->
+<div style="background:linear-gradient(135deg,#006B3F,#00A859);color:white;padding:20px;text-align:center;box-shadow:0 4px 12px rgba(0,107,63,0.2);">
+  <div style="max-width:1200px;margin:0 auto;">
+    <p style="font-size:24px;font-weight:700;margin:0 0 8px 0;">🎉 GOAL EXCEEDED! 🎉</p>
+    <p style="font-size:18px;margin:0;opacity:0.95;">$2,863.69 raised - 124% of our $2,300 goal! Program launches March 2026!</p>
+  </div>
+</div>
+
 <!-- HERO SECTION -->
 <!-- ============================================ -->
 <section class="hero">
   <div class="hero-content">
     <h1>Give Every Child a Brighter Start</h1>
-    <p class="subheading">Empowering 50 pre-kindergarten children in Gomoa Fetteh, Ghana with education, nutrition, and hope for a better tomorrow.</p>
+    <p class="subheading">Thanks to amazing supporters, we've EXCEEDED our goal! 50 children in Gomoa Fetteh will receive education, nutrition, and hope starting March 2026.</p>
     <div style="margin-top:32px;">
-      <a href="#donate" class="btn btn-large" style="margin-right:12px;">Donate Now</a>
+      <a href="#gallery" class="btn btn-large" style="margin-right:12px;">See The Children</a>
       <a href="#about" class="btn btn-ghost btn-large">Learn More</a>
     </div>
     <div class="hero-stats">
       <div class="hero-stat">
-        <span class="hero-stat-number">50</span>
-        <span class="hero-stat-label">Children Served</span>
+        <span class="hero-stat-number">$2,864</span>
+        <span class="hero-stat-label">Total Raised</span>
       </div>
       <div class="hero-stat">
-        <span class="hero-stat-number">$2,300</span>
-        <span class="hero-stat-label">Initial Goal</span>
+        <span class="hero-stat-number">124%</span>
+        <span class="hero-stat-label">Goal Exceeded</span>
       </div>
       <div class="hero-stat">
-        <span class="hero-stat-number">3</span>
-        <span class="hero-stat-label">Months Program</span>
+        <span class="hero-stat-number">Mar 2026</span>
+        <span class="hero-stat-label">Program Launch</span>
       </div>
     </div>
   </div>
@@ -509,14 +526,18 @@
 <!-- ============================================ -->
 <div class="progress-container">
   <div class="progress-label">
-    <span><strong>Fundraising Progress</strong></span>
-    <span id="progress-percentage">0%</span>
+    <span><strong>Fundraising Complete! ✅</strong></span>
+    <span id="progress-percentage" style="color:#006B3F;font-weight:700;">124%</span>
   </div>
   <div class="progress-bar">
-    <div class="progress-fill" id="progress-fill" style="width:0%;"></div>
+    <div class="progress-fill" id="progress-fill" style="width:100%;background:linear-gradient(90deg,#006B3F,#00A859);"></div>
   </div>
-  <p class="progress-message">
-    <span id="raised-amount">$0</span> raised of <strong>$2,300 goal</strong>
+  <p class="progress-message" style="color:#006B3F;font-weight:600;">
+    <span id="raised-amount">$2,863.69</span> raised - EXCEEDED our <strong>$2,300 goal</strong> by $563.69!
+  </p>
+  <p class="text-center" style="margin-top:16px;font-size:15px;color:var(--text-gray);">
+    Thank you to Blacksburg United Methodist Church Youth Group and all supporters! 
+    Program launches March 2026 - monthly updates coming soon!
   </p>
 </div>
 
@@ -541,12 +562,12 @@
         <span class="stat-label">Children Served</span>
       </div>
       <div class="stat">
-        <span class="stat-number">1</span>
-        <span class="stat-label">Pre-KG Classroom</span>
+        <span class="stat-number">$2,864</span>
+        <span class="stat-label">Total Raised</span>
       </div>
       <div class="stat">
-        <span class="stat-number">$2,300</span>
-        <span class="stat-label">Initial Budget</span>
+        <span class="stat-number">124%</span>
+        <span class="stat-label">Goal Exceeded</span>
       </div>
       <div class="stat">
         <span class="stat-number">100%</span>
@@ -706,19 +727,19 @@
       
       <!-- Phase 1 -->
       <div style="position:relative;padding-left:100px;margin-bottom:48px;">
-        <div style="position:absolute;left:24px;top:0;width:32px;height:32px;border-radius:50%;background:var(--maroon);color:white;display:flex;align-items:center;justify-content:center;font-weight:bold;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,0.1);">1</div>
-        <div class="card">
-          <h3 style="color:var(--maroon);">Fundraising Phase (Now - January 2026)</h3>
-          <p class="small">Launch website, social media campaign, church presentations, and individual outreach. Build awareness and secure the $2,300 needed to launch the program.</p>
+        <div style="position:absolute;left:24px;top:0;width:32px;height:32px;border-radius:50%;background:#006B3F;color:white;display:flex;align-items:center;justify-content:center;font-weight:bold;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,0.1);">✓</div>
+        <div class="card" style="background:#F0FAF0;border-left:4px solid #006B3F;">
+          <h3 style="color:#006B3F;">Phase 1 Complete: Fundraising ✅</h3>
+          <p class="small">GOAL EXCEEDED! Raised $2,863.69 (124% of $2,300 goal) thanks to Blacksburg United Methodist Church Youth Group and supporters. Funds secured for full program launch.</p>
         </div>
       </div>
       
       <!-- Phase 2 -->
       <div style="position:relative;padding-left:100px;margin-bottom:48px;">
-        <div style="position:absolute;left:24px;top:0;width:32px;height:32px;border-radius:50%;background:var(--gold);color:white;display:flex;align-items:center;justify-content:center;font-weight:bold;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,0.1);">2</div>
-        <div class="card">
-          <h3 style="color:var(--gold);">Preparation Phase (February 2026)</h3>
-          <p class="small">Purchase and ship materials to Ghana, arrange feeding program logistics, conduct teacher training, hold initial parent workshops, and set up monitoring systems.</p>
+        <div style="position:absolute;left:24px;top:0;width:32px;height:32px;border-radius:50%;background:var(--gold);color:white;display:flex;align-items:center;justify-content:center;font-weight:bold;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,0.1);animation:pulse 2s infinite;">2</div>
+        <div class="card" style="border-left:4px solid var(--gold);">
+          <h3 style="color:var(--gold);">Current Phase: Preparation (February 2026) 🔄</h3>
+          <p class="small">NOW IN PROGRESS: Purchasing materials, arranging shipping to Ghana, conducting teacher training, holding initial parent workshops, and setting up monitoring systems.</p>
         </div>
       </div>
       
@@ -790,8 +811,22 @@
   <!-- DONATION SECTION -->
   <!-- ============================================ -->
   <section id="donate" style="background:var(--light-bg);">
-    <h2>Make Your Donation</h2>
-    <p>Every dollar directly supports the 50 children in Gomoa Fetteh. Choose your giving level or create your own.</p>
+    <h2>Fundraising Complete - Thank You! 🎉</h2>
+    <p>Thanks to amazing supporters, we've exceeded our $2,300 goal and raised $2,863.69! The March 2026 program is fully funded. Additional donations will support Year 2 expansion.</p>
+    
+    <div class="card" style="max-width:800px;margin:32px auto;background:linear-gradient(135deg,rgba(0,107,63,0.1),rgba(0,168,89,0.1));border:2px solid #006B3F;">
+      <h3 style="text-align:center;color:#006B3F;margin-bottom:16px;">Program Status: FULLY FUNDED ✅</h3>
+      <div style="text-align:center;">
+        <p style="margin-bottom:8px;"><strong>Total Raised:</strong> $2,863.69</p>
+        <p style="margin-bottom:8px;"><strong>Original Goal:</strong> $2,300</p>
+        <p style="margin-bottom:8px;"><strong>Amount Over Goal:</strong> $563.69</p>
+        <p style="margin-bottom:8px;"><strong>Program Launch:</strong> March 2026</p>
+      </div>
+      <p style="text-align:center;margin-top:20px;font-style:italic;color:var(--text-gray);">Thank you to Blacksburg United Methodist Church Youth Group and all supporters who made this possible!</p>
+    </div>
+    
+    <h3 style="text-align:center;margin:48px 0 24px 0;">Support Year 2 (Optional)</h3>
+    <p style="text-align:center;max-width:700px;margin:0 auto 32px;">While Year 1 is fully funded, additional donations will help us expand to more children in Year 2. Every donation helps!</p>
     
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;margin-top:48px;">
       <div class="card" style="text-align:center;border-top:4px solid #006B3F;">
@@ -1185,7 +1220,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <p>&copy; 2025 Bright Start Ghana Initiative. Founded by George Armah. All donations go directly to supporting children in Gomoa Fetteh.</p>
+    <p>&copy; <span id="copyright-year">2025</span> Bright Start Ghana Initiative. Founded by George Armah. All donations go directly to supporting children in Gomoa Fetteh.</p>
     <p style="margin-top:8px;font-size:13px;">We are currently working toward 501(c)(3) status. Donations are not yet tax-deductible.</p>
   </div>
 </footer>
@@ -1237,8 +1272,8 @@ function updateProgress(raised = 0, goal = 2300) {
   }, 500);
 }
 
-// Initialize with $0 raised - update this value as donations come in
-updateProgress(0, 2300);
+// Initialize with $2,863.69 raised - GOAL EXCEEDED!
+updateProgress(2863.69, 2300);
 
 // ============================================
 // FAQ ACCORDION
@@ -1332,6 +1367,11 @@ if ('loading' in HTMLImageElement.prototype) {
 // EMAIL PROTECTION (already using CloudFlare in HTML)
 // ============================================
 // Email links are protected using CloudFlare's email protection
+
+// ============================================
+// DYNAMIC COPYRIGHT YEAR
+// ============================================
+document.getElementById('copyright-year').textContent = new Date().getFullYear();
 
 console.log('Bright Start Ghana Initiative - Website loaded successfully!');
 </script>
